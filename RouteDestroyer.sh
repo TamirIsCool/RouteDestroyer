@@ -24,6 +24,7 @@ do
   fi
 
 # We delete the records via AWS CLI
+# Note that in our case the Type and TTL is static. So we put A and 90. It might be different for you.
   aws route53 change-resource-record-sets --hosted-zone-id YOUR_HOSTED_ZONE_ID --change-batch '{
     "Changes": [
       {
